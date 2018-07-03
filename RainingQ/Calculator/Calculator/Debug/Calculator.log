@@ -1,0 +1,4 @@
+﻿  Calculator.cpp
+d:\0_git\calculator\rainingq\calculator\calculator\calculator.h(104): warning C4018: “<”: 有符号/无符号不匹配
+  Calculator.vcxproj -> D:\0_Git\Calculator\RainingQ\Calculator\Debug\Calculator.exe
+  Calculator.vcxproj -> D:\0_Git\Calculator\RainingQ\Calculator\Debug\Calculator.pdb (Partial PDB)

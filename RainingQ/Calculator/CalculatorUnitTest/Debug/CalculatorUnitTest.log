@@ -1,0 +1,6 @@
+﻿  stdafx.cpp
+  unittest1.cpp
+d:\0_git\calculator\rainingq\calculator\calculator\calculator.h(74): warning C4018: “<”: 有符号/无符号不匹配
+    正在创建库 D:\0_Git\Calculator\RainingQ\Calculator\Debug\CalculatorUnitTest.lib 和对象 D:\0_Git\Calculator\RainingQ\Calculator\Debug\CalculatorUnitTest.exp
+  CalculatorUnitTest.vcxproj -> D:\0_Git\Calculator\RainingQ\Calculator\Debug\CalculatorUnitTest.dll
+  CalculatorUnitTest.vcxproj -> D:\0_Git\Calculator\RainingQ\Calculator\Debug\CalculatorUnitTest.pdb (Partial PDB)

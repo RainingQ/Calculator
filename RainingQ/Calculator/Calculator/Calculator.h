@@ -18,14 +18,28 @@ public:
 	string MakeFormula() {
 		string formula = "";
 		srand((unsigned int)time(NULL));
-		int count = random(1, 3);
+		//int count = random(1, 3);
+		int count = random(1, 2);
 		int start = 0;
 		int number1 = random(1, 100);
 		formula += to_string(number1);
 		while (start <= count) {
 			int operation = random(0, 3);
+			//int number2;
+			//if (operation == 3) {
+			//	/*int tmp = random(1, 100);
+			//	number2 = ((number1 % 2 == 0 ? tmp * 2 :
+			//		(number1 % 3 == 0 ? tmp * 3 :
+			//		(number1 % 5 == 0 ? tmp * 5 :
+			//			tmp * 7)))) % number1;*/
+			//	number2 = number1;
+			//}
+			//else {
+			//	number2 = random(1, 100);
+			//}
 			int number2 = random(1, 100);
 			formula += op[operation] + to_string(number2);
+			number1 = number2;
 			start++;
 		}
 		return formula;
@@ -36,6 +50,7 @@ public:
 		stack<char>* operatorStack = new stack<char>();
 		int len = formula.length();
 		int k = 0;
+		int numCount = 0;
 		for (int j = -1; j < len - 1; j++) {
 			char formulaChar = formula[j + 1];
 			if (j == len - 2 || formulaChar == '+' || formulaChar == '-' ||
@@ -44,8 +59,10 @@ public:
 					tempStack->push_back(formula.substr(k));
 				}
 				else {
-					if (k < j) {
-						tempStack->push_back(formula.substr(k, j + 1));
+					//if (k < j) {
+					if (numCount != 0) {
+						tempStack->push_back(formula.substr(k, numCount));
+						numCount = 0;
 					}
 					if (operatorStack->empty()) {
 						operatorStack->push(formulaChar);
@@ -57,13 +74,26 @@ public:
 							operatorStack->push(formulaChar);
 						}
 						else {
-							tempStack->push_back(to_string(operatorStack->top()));
+							//tempStack->push_back(to_string(operatorStack->top()));
+							string tmpChar;
+							switch (operatorStack->top())
+							{
+								case '+' : tmpChar = "+"; break;
+								case '-' : tmpChar = "-"; break;
+								case '*' : tmpChar = "*"; break;
+								case '/' : tmpChar = "/"; break;
+								default : break;
+							}
+							tempStack->push_back(tmpChar);
 							operatorStack->pop();
 							operatorStack->push(formulaChar);
 						}
 					}
 				}
 				k = j + 2;
+			}
+			else {
+				numCount++;
 			}
 		}
 		while (!operatorStack->empty()) {

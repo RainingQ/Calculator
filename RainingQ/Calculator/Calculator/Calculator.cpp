@@ -7,12 +7,15 @@
 int main()
 {
 	Calculator* calc = new Calculator();
-	string question = calc->MakeFormula();
-	cout << question << endl;
-	//string ret = calc->Solve("11+22");
-	string ret = calc->Solve(question);
-	cout << ret << endl;
-	getchar();
+	int i = 4;
+	while (i--)
+	{
+		string question = calc->MakeFormula();
+		//cout << question << endl;
+		//string ret = calc->Solve("3+70*65+68");
+		string ret = calc->Solve(question);
+		cout << ret << endl;
+	}
 
     return 0;
 }
