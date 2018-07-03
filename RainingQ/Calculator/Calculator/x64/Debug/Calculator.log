@@ -1,0 +1,4 @@
+﻿  Calculator.cpp
+d:\0_git\calculator\rainingq\calculator\calculator\calculator.h(37): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  Calculator.vcxproj -> D:\0_Git\Calculator\RainingQ\Calculator\x64\Debug\Calculator.exe
+  Calculator.vcxproj -> D:\0_Git\Calculator\RainingQ\Calculator\x64\Debug\Calculator.pdb (Partial PDB)
