@@ -10,13 +10,43 @@ namespace CalculatorUnitTest
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(countOperation)
 		{
-			// TODO: 在此输入测试代码
 			Calculator* calc = new Calculator();
-			string ret = calc->Solve("11+22");
-			Assert::AreEqual(ret, (string)"11+22=33");
+			string question = calc->MakeFormula();
+			
+			int count = 0;
+			for (int i = 0; i < question.length(); i++)
+			{
+				if (question[i] == '+' || question[i] == '-'
+					|| question[i] == '*' || question[i] == '/')
+				{
+					count++;
+				}
+			}
+
+			Assert::IsTrue(count >= 2 && count <= 3);
 		}
 
+		TEST_METHOD(ret1)
+		{
+			Calculator* calc = new Calculator();
+			string ret = calc->Solve("88+17/17/17");
+			Assert::AreEqual(ret, (string)"88+17/17/17=88");
+		}
+
+		TEST_METHOD(ret2)
+		{
+			Calculator* calc = new Calculator();
+			string ret = calc->Solve("3+70*65+68");
+			Assert::AreEqual(ret, (string)"3+70*65+68=4621");
+		}
+
+		TEST_METHOD(ret3)
+		{
+			Calculator* calc = new Calculator();
+			string ret = calc->Solve("14/22+7");
+			Assert::AreEqual(ret, (string)"14/22+7=7");
+		}
 	};
 }

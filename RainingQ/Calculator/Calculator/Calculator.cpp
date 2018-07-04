@@ -7,7 +7,7 @@
 int main()
 {
 	Calculator* calc = new Calculator();
-	int i = 4;
+	int i = 10;
 	while (i--)
 	{
 		string question = calc->MakeFormula();

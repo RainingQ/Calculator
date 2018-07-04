@@ -1,0 +1,5 @@
+﻿  unittest1.cpp
+d:\0_git\calculator\rainingq\calculator\calculator\calculator.h(104): warning C4018: “<”: 有符号/无符号不匹配
+d:\0_git\calculator\rainingq\calculator\calculatorunittest\unittest1.cpp(19): warning C4018: “<”: 有符号/无符号不匹配
+  CalculatorUnitTest.vcxproj -> D:\0_Git\Calculator\RainingQ\Calculator\Debug\CalculatorUnitTest.dll
+  CalculatorUnitTest.vcxproj -> D:\0_Git\Calculator\RainingQ\Calculator\Debug\CalculatorUnitTest.pdb (Partial PDB)
